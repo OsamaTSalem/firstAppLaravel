@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
+        Schema::create('courses', function (Blueprint $table) {
+            $table->id(); // id auto
             $table->string('name');
-            $table->integer('age');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->enum('status', ['admin', 'user']);
-            $table->timestamps();
+            $table->text('bio');
+            // $table->string('password');
+            // $table->string('email');
+
+            // $table->unsignedBigInteger('user_id')->nullable()->comment("User ID");
+            $table->timestamps(); // current time for (created at & updated at)
+            
         });
     }
 
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('courses');
     }
 };

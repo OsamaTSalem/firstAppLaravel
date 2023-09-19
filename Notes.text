@@ -1,0 +1,5 @@
+php artisan make:migration (الاسم جمع واول حرف سمول) // مسوؤل هن الجدول
+php artisan make:model (الاسم اول حرف كابتل ومفردة) // create model
+php artisan make:model (Name Model) -m // create model and migration
+php artisan make:factory (الاسم لازم يكون نفس اسم المودل) // (الملف الي بحط فيه البيانات بشكل وهمي لمجرد التجريب)
+php artisan db:seed // (ينقل البيانات لداتا بيز)
